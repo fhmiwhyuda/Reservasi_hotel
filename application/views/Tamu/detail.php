@@ -78,6 +78,7 @@
                                     <p class="excert">
                                         <?= $kamar['info_kamar']->deskripsi ?>
                                     </p>
+                                    <h5>Rp <?= $kamar['info_kamar']->price ?><small>/malam</small></h5>
                                 </div>
                                 <div class="feature-img">
                                     <img class="img-fluid" src="<?= base_url('assets/image/upload/' . $kamar['info_kamar']->img_room) ?>" alt="">

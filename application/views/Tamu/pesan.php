@@ -56,10 +56,10 @@
         </div>
         <div class="container">
             <div class="page-cover text-center">
-                <h2 class="page-cover-tittle">Pesan</h2>
+                <h2 class="page-cover-tittle">Form Pemesan</h2>
                 <ol class="breadcrumb">
                     <li><a href="<?= base_url('Tamu/welcome') ?>">Home</a></li>
-                    <li class="active">Pesan</li>
+                    <li class="active">Form Pemesan</li>
                 </ol>
             </div>
         </div>
@@ -70,85 +70,86 @@
     <section class="facilities_area section_gap">
         <div class="hotel_booking_area position">
             <div class="container">
-                <center>
-                    <div class="col-md-4">
-                        <h2>Form Pemesanan</h2>
-                    </div>
-                </center>
-                <div class="hotel_booking_table">
+                <div class="row">
                     <div class="col-md-12">
-                        <div class="boking_table">
+                        <div class="book_tabel_item">
                             <div class="row">
-                                <div class="col-md-10">
-                                    <div class="book_tabel_item">
-                                        <form action="<?= base_url('Tamu/prosespesan') ?>" method="POST">
-                                            <div class="form-group">
-                                                <p>Masukkan Nama Pemesan</p>
-                                                <div class='input-group'>
-                                                    <input type="text" name="nama_pemesan" placeholder="Nama pemesan" class="form-control" value="<?= $data['user']->Nama ?>" readonly>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <p>Masukkan Email</p>
-                                                <div class='input-group'>
-                                                    <input type="email" name="email" placeholder="Email" class="form-control" required>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <p>Masukkan Nomor HP</p>
-                                                <div class='input-group'>
-                                                    <input type="text" name="no_hp" placeholder="Nomor HP" class="form-control" value="<?= $data['user']->nowa ?>" required>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <p>Masukkan Nama Tamu</p>
-                                                <div class='input-group'>
-                                                    <input type="text" name="nama_tamu" placeholder="Nama Tamu" class="form-control" required>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class='input-group'>
-                                                    <input type="hidden" name="id_room" class="form-control" value="<?= $_GET['id'] ?>">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <p>Masukkan Tanggal Checkin</p>
-                                                <div class='input-group date'>
-                                                    <input type='date' name="tgl_checkin" class="form-control" required>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <p>Masulkan Tanggal Checkout</p>
-                                                <div class='input-group date'>
-                                                    <input type='date' name="tgl_checkout" class="form-control" required>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <p>Masukkan Jumlah Kamar Yang Ingin Dipesan</p>
-                                                <div class='input-group'>
-                                                    <input type="number" name="jml_kamar" placeholder="Jumlah Kamar" class="form-control" required>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <p>Pilih Metode Pembayaran</p>
-                                                <div class="input-group">
-                                                    <select class="wide" name="metode">
-                                                        <option value="Website" data-display="Website">Website</option>
-                                                        <option value="E-wallet">E-wallet</option>
-                                                        <option value="M-Bank">M-Bank</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class='input-group'>
-                                                    <input type="hidden" name="refpb" class="form-control">
-                                                </div>
-                                            </div>
-                                            <button type="submit" class="book_now_btn button_hover rounded mt-4">Kirim</button>
-                                        </form>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <p>Masukkan Tanggal Checkin</p>
+                                        <div class='input-group date'>
+                                            <input type='date' name="tgl_checkin" class="form-control" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <p>Masulkan Tanggal Checkout</p>
+                                        <div class='input-group date'>
+                                            <input type='date' name="tgl_checkout" class="form-control" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <p>Masukkan Jumlah Kamar Yang Ingin Dipesan</p>
+                                        <div class='input-group'>
+                                            <input type="number" name="jml_kamar" placeholder="Jumlah Kamar" class="form-control" required>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="book_tabel_item">
+                            <form action="<?= base_url('Tamu/prosespesan') ?>" method="POST">
+                                <div class="form-group">
+                                    <p>Masukkan Nama Pemesan</p>
+                                    <div class='input-group'>
+                                        <input type="text" name="nama_pemesan" placeholder="Nama pemesan" class="form-control" value="<?= $data['user']->Nama ?>" readonly>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p>Masukkan Email</p>
+                                    <div class='input-group'>
+                                        <input type="email" name="email" placeholder="Email" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p>Masukkan Nomor HP</p>
+                                    <div class='input-group'>
+                                        <input type="text" name="no_hp" placeholder="Nomor HP" class="form-control" value="<?= $data['user']->nowa ?>" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p>Masukkan Nama Tamu</p>
+                                    <div class='input-group'>
+                                        <input type="text" name="nama_tamu" placeholder="Nama Tamu" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class='input-group'>
+                                        <input type="hidden" name="id_room" class="form-control" value="<?= $_GET['id'] ?>">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p>Pilih Metode Pembayaran</p>
+                                    <div class="input-group">
+                                        <select class="wide" name="metode">
+                                            <option value="Website" data-display="Website">Website</option>
+                                            <option value="E-wallet">E-wallet</option>
+                                            <option value="M-Bank">M-Bank</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class='input-group'>
+                                        <input type="hidden" name="refpb" class="form-control">
+                                    </div>
+                                </div>
+                                <button type="submit" class="book_now_btn button_hover rounded mt-4">Kirim</button>
+                            </form>
                         </div>
                     </div>
                 </div>
