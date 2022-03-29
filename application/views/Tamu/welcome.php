@@ -57,7 +57,7 @@
             <div class="container">
                 <div class="banner_content text-center">
                     <h2 class="mb-3">Segarkan Pikiranmu</h2>
-                    <a href="#" class="btn theme_btn button_hover">Pesan Sekarang</a>
+                    <a href="<?= base_url('Tamu/kamar')?>" class="btn theme_btn button_hover">Pesan Sekarang</a>
                 </div>
             </div>
         </div>
