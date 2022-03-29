@@ -61,6 +61,7 @@ class Tamu extends CI_Controller
         $data['kamar'] = $datakamar;
         $this->load->view('Tamu/pesan', ['data' => $data]);
     }
+    
     public function prosespesan()
     {
         $data = array(
@@ -81,3 +82,4 @@ class Tamu extends CI_Controller
         $this->db->insert('pemesanan', $data);
     }
 }
+?>
