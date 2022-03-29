@@ -56,10 +56,10 @@
         </div>
         <div class="container">
             <div class="page-cover text-center">
-                <h2 class="page-cover-tittle">Form Pemesan</h2>
+                <h2 class="page-cover-tittle">Form Pemesanan</h2>
                 <ol class="breadcrumb">
                     <li><a href="<?= base_url('Tamu/welcome') ?>">Home</a></li>
-                    <li class="active">Form Pemesan</li>
+                    <li class="active">Form Pemesanan</li>
                 </ol>
             </div>
         </div>
@@ -70,40 +70,40 @@
     <section class="facilities_area section_gap">
         <div class="hotel_booking_area position">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="book_tabel_item">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <p>Masukkan Tanggal Checkin</p>
-                                        <div class='input-group date'>
-                                            <input type='date' name="tgl_checkin" class="form-control" required>
+                <form action="<?= base_url('Tamu/prosespesan') ?>" method="POST">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="book_tabel_item">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <p>Masukkan Tanggal Checkin</p>
+                                            <div class='input-group date'>
+                                                <input type='date' name="tgl_checkin" class="form-control" required>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <p>Masulkan Tanggal Checkout</p>
-                                        <div class='input-group date'>
-                                            <input type='date' name="tgl_checkout" class="form-control" required>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <p>Masulkan Tanggal Checkout</p>
+                                            <div class='input-group date'>
+                                                <input type='date' name="tgl_checkout" class="form-control" required>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <p>Masukkan Jumlah Kamar Yang Ingin Dipesan</p>
-                                        <div class='input-group'>
-                                            <input type="number" name="jml_kamar" placeholder="Jumlah Kamar" class="form-control" required>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <p>Masukkan Jumlah Kamar Yang Ingin Dipesan</p>
+                                            <div class='input-group'>
+                                                <input type="number" name="jml_kamar" placeholder="Jumlah Kamar" class="form-control" required>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="book_tabel_item">
-                            <form action="<?= base_url('Tamu/prosespesan') ?>" method="POST">
+                        <div class="col-md-12">
+                            <div class="book_tabel_item">
                                 <div class="form-group">
                                     <p>Masukkan Nama Pemesan</p>
                                     <div class='input-group'>
@@ -113,7 +113,7 @@
                                 <div class="form-group">
                                     <p>Masukkan Email</p>
                                     <div class='input-group'>
-                                        <input type="email" name="email" placeholder="Email" class="form-control" required>
+                                            <input type="email" name="email" placeholder="Email" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -149,10 +149,10 @@
                                     </div>
                                 </div>
                                 <button type="submit" class="book_now_btn button_hover rounded mt-4">Kirim</button>
-                            </form>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
     </section>
     <!--================ Form pesan =================-->
