@@ -85,6 +85,7 @@ class Tamu extends CI_Controller
             'payend' =>  0,
             'nomor_kamar' =>  0,
             'refpb' =>  date('mdy') . $_POST['metode'] . date('His'),
+            'status' => 0,
         );
 
         $this->db->insert('pemesanan', $data);
