@@ -52,10 +52,10 @@ class Auth extends CI_Controller
             redirect('Tamu/welcome');
         }
         if ($_SESSION['user']->level == "resepsionis") {
-            redirect('Resepsionis/index.php');
+            redirect('Resepsionis/welcome');
         }
         if ($_SESSION['user']->level == "admin") {
-            redirect('Admin/index.php');
+            redirect('Admin/welcome');
         }
     }
 }
